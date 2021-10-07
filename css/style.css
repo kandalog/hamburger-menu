@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/*sassの共通css*/
+/*基本共通のCSS*/
+body {
+  color: #333;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #082b48;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.clear::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+@media screen and (max-width: 767px) {
+  .is-pc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .is-sp {
+    display: none;
+  }
+}
+
+/* 
+--------------------------------------------------------------*/
+.hamburger__icon {
+  position: fixed;
+  top: 20px;
+  right: 16px;
+  z-index: 200;
+  display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 767px) {
+  .hamburger__icon {
+    display: block;
+  }
+}
+
+.hamburger__icon.active {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+}
+
+.hamburger__icon.active .hamburger__icon__bars1 {
+  top: 8px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.hamburger__icon.active .hamburger__icon__bars2 {
+  display: none;
+}
+
+.hamburger__icon.active .hamburger__icon__bars3 {
+  top: 8px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.hamburger__icon__bars {
+  width: 22px;
+  height: 20px;
+  display: block;
+  position: relative;
+}
+
+.hamburger__icon__bars1,
+.hamburger__icon__bars2,
+.hamburger__icon__bars3 {
+  position: absolute;
+  width: 22px;
+  height: 4px;
+  background: #fff;
+  top: 0;
+  left: 0;
+}
+
+.hamburger__icon__bars1 {
+  top: 0;
+}
+
+.hamburger__icon__bars2 {
+  top: 8px;
+}
+
+.hamburger__icon__bars3 {
+  top: 16px;
+}
+
+.hamburger__content {
+  width: 200px;
+  height: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  -webkit-box-shadow: 0 0 3px #00000029;
+          box-shadow: 0 0 3px #00000029;
+  z-index: 120;
+  -webkit-transform: translateX(105%);
+          transform: translateX(105%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hamburger__content.active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.hamburger__content-item {
+  border-bottom: 1px dotted #707070;
+}
+
+.hamburger__content-item a {
+  display: block;
+  color: #707070;
+  text-decoration: none;
+  padding: 20px 145px 20px 20px;
+}
+
+.hamburger__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hamburger__background.active {
+  display: block;
+}
+
+body {
+  background-color: #808080;
+}
